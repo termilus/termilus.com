@@ -2,16 +2,14 @@
 	<div class="author">
 
 		<h1 v-if="showTitle" class="author__site-title">
-			{{ $static.metadata.siteName }}
+			<img src="../../static/images/uploads/termilus.png"></img>
 		</h1>
 
 		<p class="author__intro">
-			A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.
+			Bits and bytes of a hacker.
 		</p>
 
 		<p class="author__links">
-			<a href="//twitter.com/suits_at">Follow on Twitter</a>
-			<a href="https://github.com/suits-at/netlifycms-gridsome">GitHub</a>
 		</p>
 
 	</div>

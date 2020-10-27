@@ -26,16 +26,16 @@ There are multiple possible reasons to use a PAT server for port forwarding. Her
 
 For this tutorial we will use Redshift deployed to a private subnet in AWS as our example.
 
-In this scenario, we are on-prem, and outbound traffic on port 5439 is blocked by the corporate firewall.
+In this scenario, we are on-prem, and outbound traffic to port 5439 is blocked by the network firewall.
 
-To get around this restriction, we will configure our Multi-Port Forward Server to publicly listen on port 443, and forward the incoming traffic to Redshift on port 5439. All incoming traffic will be IP whitelisted to only allowing traffic from our organizational IP addresses.
+To get around this restriction, we will configure our Port Forward Server to publicly listen on port 443, and forward the incoming traffic to Redshift on port 5439. All incoming traffic will be IP whitelisted to only allowing traffic from our local IP address.
 
 Let’s assume the following network architecture:
 
-* A VPC configured with a 192.168.0.0/16 CIDR range.
+* A VPC configured with a 172.31.0.0/16 CIDR range.
 * Two subnets configured:
-* One private, with no internet access (192.168.1.0/24)
-* One public, with an internet gateway configured for internet access (192.168.0.0/24)
+* One private, with no internet access (172.31.1.0/24)
+* One public, with an internet gateway configured for internet access (172.31.0.0/24)
 
     
 

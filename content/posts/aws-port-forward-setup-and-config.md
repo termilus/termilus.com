@@ -46,7 +46,6 @@ Let’s assume the following network architecture:
 
   * Inbound ports 22 and 443 from an authorized IP address
   * Inbound port 5439 from the public subnet into the private subnet
-  * And inbound traffic from the security group itself allowing internal VPC traffic
 
     ![VPC Security Group](../../static/images/uploads/vpcsecuritygroup.png)
 

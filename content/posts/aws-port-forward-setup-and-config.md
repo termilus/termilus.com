@@ -58,7 +58,7 @@ Once the networking is configured properly, we can deploy and configure the Port
 
 ### Steps to deploy the Port Forward Server are as follows:
 
-1. Deploy the AWS [Port Forward Server](https://aws.amazon.com/marketplace/pp/B07TDD4LM6/ref=_ptnr_termilus_apfsc) appliance from the marketplace into your public subnet
+1. Deploy the AWS [Port Forward Server](https://aws.amazon.com/marketplace/pp/B07TDD4LM6/?ref=_ptnr_termilus_apfsc) appliance from the marketplace into your public subnet
 2. SSH into the Port Forward Server
 3. Open the portforward.config file and update the SPORT, DHOST and DPORT entries (source port, destination host, and destination port respectively) to forward incoming traffic on port 443 to the Redshift cluster's private IP address, on Redshift's native port
 

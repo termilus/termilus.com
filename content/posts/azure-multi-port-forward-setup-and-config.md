@@ -40,7 +40,6 @@ Let’s assume the following network architecture:
   * One public, with an internet gateway configured for internet access (10.1.0.0/24)
 
   ![Subnets](../../static/images/uploads/multi-portforwardsubnets.png)
-
 * A Windows system deployed to the private subnet which will be listening for RDP connections on its default port, 3389
 * An Ubuntu server deployed to the private subnet listening for inbound SSH connections on port 22
 * A Port Forward Server appliance deployed to the public subnet will be listening on ports 443, 80, 53, and 22
@@ -52,39 +51,34 @@ Let’s assume the following network architecture:
   ![Deployed Multi-Port Forward Server](../../static/images/uploads/multi-portforwardserverdeployed.png)
 * The network security groups needs to be configured to allow:
 
-  * Inbound ports 443, 80, 53, and 22 from an authorized IP address
-  * Inbound ports 3389 and 22 from the public subnet into the private subnet
+  * Inbound ports 443, 80, 53, and 22 to the Multi-Port Forward Server from an authorized IP address
 
-    ![VPC Security Group](../../static/images/uploads/multivpcsecuritygroup.png)
+    ![Multi-Port Forward Server NSG](../../static/images/uploads/multi-portforwardnsg.png)
+  * Inbound port 3389 from the Multi-Port Forward Server to the Windows server
+
+    ![Windows Server NSG](../../static/images/uploads/windowsnsg.png)
+  * Inbound port 22 from the Multi-Port Forward Server to the Ubuntu server
+
+    ![Ubuntu Server NSG](../../static/images/uploads/ubuntunsg.png)
 
 Here is an architectural diagram of the setup we’ve just constructed:
 
-![Multi-Port Forward Diagram](../../static/images/uploads/multi-portforwarddiagram.png)
+![Multi-Port Forward Diagram](../../static/images/uploads/azuremultiportforwarddiagram.png)
 
 Now that the infrastructure is setup, we're ready to deploy the Multi-Port Forward Server into the public subnet.
 
 ### How to deploy the Multi-Port Forward Server:
 
-1. Deploy the AWS [Multi-Port Forward Server](https://aws.amazon.com/marketplace/pp/B086QWQQXX/?ref=_ptnr_termilus_ampfsc) appliance from the marketplace into your public subnet
+1. Deploy the Azure Multi-Port Forward Server appliance from the marketplace into your public subnet
 2. SSH into the Multi-Port Forward Server
-3. Open the portforward.config file and update the SPORT, DHOST and DPORT entries (source port, destination host, and destination port respectively) in JSON format; key names should be descriptive
-4. Save the portforward.config file
+3. Open the /etc/multiportforward/multiportforward.config file and update the SPORT, DHOST and DPORT entries (source port, destination host, and destination port respectively) in JSON format; key names should be descriptive
+4. Save the multiportforward.config file
 5. Reboot the server
 
-![Multi-Port Forwarding Working](../../static/images/uploads/validatedmultiportforward.png)
+![Multi-Port Forwarding Working](../../static/images/uploads/azuremultiportforwardconfig.png)
 
 And that’s it! Your Multi-Port Forward Server should now be forwarding:
 
-* All incoming port 443 traffic is being directed to your Redshift cluster, deployed in your private subnet, listening on port 5439
+* All incoming port 443 traffic is being directed to your Windows server deployed in your private subnet, listening on port 3389
 * All incoming port 80 traffic is being directed to your Ubuntu SSH server, deployed in your private subnet, listening on port 22
 * All incoming port 53 traffic is being directed to an external RDP server, listening on port 3389
-
-You can test the connection to your Redshift cluster by entering the public DNS of your Multi-Port Forward Server as the target host using psql:
-
-`psql -h ec2-12-34-56-78.compute-1.amazonaws.com -U awsuser -d dev -p 443`
-
-Again, the same host name can be used to verify the connection to your internal Ubuntu SSH host:
-
-`ssh -i ~/.ssh/Ubuntu.pem ubuntu@ec2-12-23-34-78.compute-1.amazonaws.com -p 80`
-
-And similarly, use the same hostname when connecting via remote desktop.

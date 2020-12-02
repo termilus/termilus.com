@@ -40,6 +40,7 @@ Let’s assume the following network architecture:
   * One public, with an internet gateway configured for internet access (10.1.0.0/24)
 
   ![Subnets](../../static/images/uploads/multi-portforwardsubnets.png)
+
 * A Windows system deployed to the private subnet which will be listening for RDP connections on its default port, 3389
 * An Ubuntu server deployed to the private subnet listening for inbound SSH connections on port 22
 * A Port Forward Server appliance deployed to the public subnet will be listening on ports 443, 80, 53, and 22

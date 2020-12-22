@@ -36,3 +36,5 @@ The Reverse SSH Server eliminates the need to track and remember multiple, dozen
 
 ### **How**
 
+To begin the Reverse SSH Server deployment, navigate to the AWS marketplace here and deploy the appliance.
+

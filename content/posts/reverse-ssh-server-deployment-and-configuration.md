@@ -33,8 +33,48 @@ The Reverse SSH Server eliminates the need to track and remember multiple, dozen
 3. Connection durability - auto reconnects even across reboots.
 4. Ability to change server listening port on initial setup from 22 to 443 or any other port.
 
-
 ### **How**
 
 To begin the Reverse SSH Server deployment, navigate to the AWS marketplace here and deploy the appliance.
 
+Configure the security group to only allow inbound SSH.
+
+SSH into the Reverse SSH Server and create your first client script by running:
+
+`sudo reversessh`
+
+The program will prompt you for a client name and output the client script into your current directory.
+
+Display the file contents to the screen and copy its content to your clipboard (remember to replace "myclient" with your actual client name):
+
+`cat ReverseSSH-myclient-Client.sh`
+
+Now, in a separate window, SSH into your client machine and create the same client script:
+
+`nano ReverseSSH-myclient-Client.sh`
+
+Paste the clipboard content into this script, save, and close the file.
+
+Make the client script executable:
+
+`chmod +x ReverseSSH-myclient-Client.sh`
+
+Run the client script with sudo privileges:
+
+`sudo ./ReverseSSH-myclient-Client.sh`
+
+Now, back in the Reverse SSH Server window, validate that the client has successfully connected:
+
+`sudo netstat -antp`
+
+If the client successfully connected, its name will be shown on the far right, and its SSH port will be forwarded to be locally accessible to the Reverse SSH Server.
+
+We can now connect to the client machine locally via the Reverse SSH Server by specifying the client's username, forwarded SSH port and the client's RSA key. In our example, the client's username was ec2-user and the port which was forwarded was 56148:
+
+`ssh ec2-user@127.0.0.1 -p 56148 -i ~/.ssh/myclient-id_rsa`
+
+That's it, you can add as many clients as you wish to the Reverse SSH Server.
+
+### **Removing a client from the Reverse SSH Server**
+
+On the Reverse SSH Server, 

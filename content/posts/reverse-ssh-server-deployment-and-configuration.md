@@ -18,6 +18,8 @@ description: >-
 
   This appliance allows clients behind NAT'd environments with private IP addresses to connect outbound to the Reverse SSH Server and be administrate-able. The server and its clients are configured to auto-reconnect if either one gets rebooted.
 ---
+![]()
+
 ### **What**
 
 The Reverse SSH Server is an appliance which provides persistent connections to other servers or IoT devices even when those endpoints are deployed in private IP environments and even if the endpoints reboot unexpectedly.
@@ -41,9 +43,9 @@ Configure the security group to only allow inbound SSH.
 
 SSH into the Reverse SSH Server and create your first client script by running:
 
-`sudo reversessh`
+`sudo reversessh -a myclient`
 
-The program will prompt you for a client name and output the client script into your current directory.
+The "-a" flag indicates that we're adding a user, and the program will output the client script into your current directory.
 
 Display the file contents to the screen and copy its content to your clipboard (remember to replace "myclient" with your actual client name):
 
@@ -77,4 +79,12 @@ That's it, you can add as many clients as you wish to the Reverse SSH Server.
 
 ### **Removing a client from the Reverse SSH Server**
 
-On the Reverse SSH Server, 
+On the Reverse SSH Server, we can remove a client by running:
+
+`sudo reversessh -r myclient`
+
+The "-r" flag indicates that we are removing a client. This operation will remove a client from the Reverse SSH Server and terminate any existing connections from that client.
+
+### **Video Walk-Through**
+
+[![Reverse SSH Server Walk-Through](../../static/images/uploads/reversesshserverstill.png)](../../static/images/uploads/reversesshserverwalkthrough.mp4 "Reverse SSH Server Walk-Through")

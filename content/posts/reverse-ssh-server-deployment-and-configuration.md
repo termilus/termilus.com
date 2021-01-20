@@ -9,11 +9,13 @@ tags:
   - port forwarding
 cover_image: ../../static/images/uploads/logo.png
 description: >-
-  This guide explains how to deploy a Reverse SSH Server in AWS. The Reverse SSH
-  Server allows multiple clients to connect to the server via SSH on a
-  persistent basis. The clients are configured to port forward their own local
-  SSH service to allow administration of all clients simply by connecting to the
-  Reverse SSH Server and then SSH-ing to the appropriate local ports.
+  This guide explains how to deploy a [Reverse SSH Server in
+  AWS](https://aws.amazon.com/marketplace/pp/B08SV2LQRT/?ref=_ptnr_termilus_rssdac).
+  The Reverse SSH Server allows multiple clients to connect to the server via
+  SSH on a persistent basis. The clients are configured to port forward their
+  own local SSH service to allow administration of all clients simply by
+  connecting to the Reverse SSH Server and then SSH-ing to the appropriate local
+  ports.
 
 
   This appliance allows clients behind NAT'd environments with private IP addresses to connect outbound to the Reverse SSH Server and be administrate-able. The server and its clients are configured to auto-reconnect if either one gets rebooted.
@@ -37,7 +39,7 @@ The Reverse SSH Server eliminates the need to track and remember multiple, dozen
 
 ### **How**
 
-To begin the Reverse SSH Server deployment, navigate to the AWS marketplace here and deploy the appliance.
+To begin the Reverse SSH Server deployment, navigate to the AWS marketplace [here](https://aws.amazon.com/marketplace/pp/B08SV2LQRT/?ref=_ptnr_termilus_rssdac) and deploy the appliance.
 
 Configure the security group to only allow inbound SSH.
 

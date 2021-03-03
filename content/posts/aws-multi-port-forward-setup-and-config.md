@@ -65,12 +65,13 @@ Now that the infrastructure is setup, we're ready to deploy the Multi-Port Forwa
 ### How to deploy the Multi-Port Forward Server:
 
 1. Deploy the AWS [Multi-Port Forward Server](https://aws.amazon.com/marketplace/pp/B086QWQQXX/?ref=_ptnr_termilus_ampfsc) or Azure Multi-Port Forward Server appliance from the marketplace into your public subnet
-2. SSH into the Multi-Port Forward Server
-3. Open the /etc/multiportforward/​multiportforward.config file with vim or nano and update the SPORT, DHOST, DPORT and PROTOCOL entries (source port, destination host, destination port and connection protocol respectively) in JSON format; key names should be descriptive
-4. Save the multiportforward.config file
-5. Reboot the server
+2. Disable source and destination checks on the instance, [more info here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html#EIP_Disable_SrcDestCheck)
+3. SSH into the Multi-Port Forward Server
+4. Open the /etc/multiportforward/​multiportforward.config file with vim or nano and update the SPORT, DHOST, DPORT and PROTOCOL entries (source port, destination host, destination port and connection protocol respectively) in JSON format; key names should be descriptive
+5. Save the multiportforward.config file
+6. Reboot the server
 
-![Multi-Port Forwarding Working](../../static/images/uploads/validatedmultiportforward.png)
+![Multi-Port Forwarding Working](../../static/images/uploads/multi-portforwardserversetup.png)
 
 And that’s it! Your Multi-Port Forward Server should now be forwarding:
 

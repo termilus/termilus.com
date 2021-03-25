@@ -5,13 +5,14 @@ published: true
 tags:
   - AWS
   - Multi-Port Forward
+  - Azure
 cover_image: ../../static/images/uploads/multi-portforwardserverlogo.png
 description: This guide explains how to deploy and configure a Multi-Port
   Forward Server in AWS and Azure. The Multi-Port Forward Server is designed to
   listen on multiple user-defined ports and redirect inbound TCP or UDP traffic
-  to user-defined hosts (internal or external) and ports. This creates a
-  versatile network address translation (NAT) and port address translation (PAT)
-  appliance in your AWS VPC or Azure subscription.
+  to user-defined destination hosts and ports. This creates a versatile network
+  address translation (NAT) and port address translation (PAT) appliance in your
+  AWS VPC or Azure subscription.
 ---
 ### **What**
 

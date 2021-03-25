@@ -6,6 +6,9 @@ tags:
   - AWS
   - Multi-Port Forward
   - Azure
+  - NAT
+  - tag
+  - PAT
 cover_image: ../../static/images/uploads/multi-portforwardserverlogo.png
 description: This guide explains how to deploy and configure a Multi-Port
   Forward Server in AWS and Azure. The Multi-Port Forward Server is designed to

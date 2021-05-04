@@ -7,6 +7,6 @@ tags:
 cover_image: ../../static/images/uploads/azure.png
 description: "For assistance with getting setup and configured with Azure
   products, please reach out to our support team by emailing us at:
-  y29ybmvszhvwcmvleg@gmail.com"
+  support@termilus.com"
 ---
 Customer support is provided Monday through Friday from 9:00 am to 5:00 pm EDT.

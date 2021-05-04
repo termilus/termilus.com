@@ -5,8 +5,9 @@ published: true
 tags:
   - help
 cover_image: ../../static/images/uploads/azure.png
-description: "For assistance with getting setup and configured with Azure
-  products, please reach out to our support team by emailing us at:
-  support@termilus.com"
+description: Termilus is happy to provide troubleshooting and guidance on
+  deploying out products.
 ---
+For assistance with getting setup and configured with Azure products, please reach out to our support team by emailing us at: support@termilus.com
+
 Customer support is provided Monday through Friday from 9:00 am to 5:00 pm EDT.

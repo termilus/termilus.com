@@ -7,6 +7,8 @@ tags:
   - Remote Access
 description: Setup a client for your SSH VPN and see how to get connected.
 ---
+![]()
+
 ## What
 
 The Termilus SSH VPN server is a remote access solution similar to a traditional VPN, however traffic traverses an SSH tunnel as opposed to PPTP, L2TP, IPSEC etc.
@@ -54,3 +56,7 @@ The following steps will explain how to create and deploy the Termilus SSH VPN c
 ### **Video Walk-Through**
 
 [![Termilus SSH VPN Walk-Through](../../static/images/uploads/termilussshvpnstill.png)](../../static/images/uploads/termilussshvpn.mp4 "Termilus SSH VPN Server Walk-Through")
+
+
+
+![](../../static/images/uploads/termilussshvpnstill.png)

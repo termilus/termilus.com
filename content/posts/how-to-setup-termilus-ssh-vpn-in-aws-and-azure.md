@@ -14,7 +14,9 @@ The Termilus SSH VPN server is a remote access solution similar to a traditional
 Currently, the Termilus SSH VPN has been tested and confirmed to be working on:
 
 * Ubuntu 20.04
-*
+* CentOS Stream 8
+* Fedora 34
+* MacOS Big Sur
 
 ## Why
 
@@ -24,21 +26,29 @@ Currently, the Termilus SSH VPN has been tested and confirmed to be working on:
 
 ## How
 
-1. Deploy the Termilus SSH VPN into your Azure subscription or AWS VPC. The server will need to be assigned a publicly accessible IP address.
+The following steps will explain how to create and deploy the Termilus SSH VPN clients. If you'd rather watch the video explainer, please scroll to the bottom.
+
+1. Deploy the Termilus SSH VPN into your Azure subscription or AWS VPC. The server will need to be assigned a publicly accessible IP address. If you're following along, make sure to update all subsequent commands with the public IP address or DNS record for your server. In this example, mine will be: `ec2-54-91-77-201.compute-1.amazonaws.com`
 2. Connect to the Termilus SSH VPN: `ssh -i ~/.ssh/Termilus.pem ec2-user@ec2-54-91-77-201.compute-1.amazonaws.com`
-3. Run the sshvpn command to create a new SSH VPN user: `sudo sshvpn -a ubuntu`
+3. Run the sshvpn command to create a new SSH VPN user. For this example, our client will be an Ubuntu machine, so we will call this client "ubuntu": `sudo sshvpn -a ubuntu`
 4. Exit the SSH session with the server: `exit`
 5. Use SFTP to retrieve the client installer script: `sftp -i ~/.ssh/Termilus.pem ec2-user@ec2-54-91-77-201.compute-1.amazonaws.com:/home/ec2-user/SSHVPN-ubuntu-Client.sh ./SSHVPN-ubuntu-Client.sh`
+
+   Or, copy and paste the client installer script to the destination host using ssh and cat: `ssh -i ~/.ssh/Termilus.pem ec2-user@ec2-54-91-77-201.compute-1.amazonaws.com -t "cat /home/ec2-user/SSHVPN-ubuntu-Client.sh"`
+
+   Now, paste the file contents into a new file on the client machine and save the file as: `SSHVPN-ubuntu-Client.sh`
 6. Make the client installer script executable: `chmod +x SSHVPN-ubuntu-Client.sh`
 7. Run the installer script: `sudo ./SSHVPN-ubuntu-Client.sh`
-8. The SSH VPN can now be toggled on with:
+8. And that's it! The SSH VPN can now be toggled on with:
 
    Linux: `sudo service sshvpn-ubuntu start`
 
    MacOS: `sudo launchctl load /Library/LaunchDaemons/org.termilus.sshvpn.plist`
 
-   And can be toggled off again with:
+   To toggle off the SSH VPN, run:
 
    Linux: `sudo service sshvpn-ubuntu stop`
 
    MacOS: `sudo launchctl unload /Library/LaunchDaemons/org.termilus.sshvpn.plist`
+
+![](../../static/images/uploads/termilussshvpn.mp4)

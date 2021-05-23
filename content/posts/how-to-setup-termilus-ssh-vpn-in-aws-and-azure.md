@@ -51,4 +51,6 @@ The following steps will explain how to create and deploy the Termilus SSH VPN c
 
    MacOS: `sudo launchctl unload /Library/LaunchDaemons/org.termilus.sshvpn.plist`
 
-![](../../static/images/uploads/termilussshvpn.mp4)
+### **Video Walk-Through**
+
+[![Termilus SSH VPN Walk-Through](../../static/images/uploads/termilussshvpnstill.png)](../../static/images/uploads/termilussshvpn.mp4 "Termilus SSH VPN Server Walk-Through")

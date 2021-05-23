@@ -1,7 +1,7 @@
 ---
 title: How to Setup Termilus SSH VPN in AWS and Azure
 date: 2021-05-20T20:22:25.688Z
-published: false
+published: true
 tags:
   - SSH VPN
   - Remote Access

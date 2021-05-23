@@ -6,7 +6,7 @@ tags:
   - help
 cover_image: ../../static/images/uploads/azure.png
 description: Termilus is happy to provide troubleshooting and guidance on
-  deploying out products.
+  deploying our products.
 ---
 For assistance with getting setup and configured with Azure products, please reach out to our support team by emailing us at: support@termilus.com
 

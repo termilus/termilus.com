@@ -5,6 +5,7 @@ published: true
 tags:
   - SSH VPN
   - Remote Access
+cover_image: ../../static/images/uploads/termilus-ssh-vpn.png
 description: This guide explains how to deploy the Termilus SSH VPN Server in
   AWS and Azure. The Termilus SSH VPN server provides a secure, encrypted SSH
   connection that proxies all traffic from the client machine through to the SSH

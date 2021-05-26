@@ -17,7 +17,7 @@ description: This guide explains how to deploy the Termilus SSH VPN Server in
 
 The Termilus SSH VPN server is a remote access solution similar to a traditional VPN, however traffic traverses an SSH tunnel as opposed to PPTP, L2TP, IPSEC etc.
 
-Currently, the Termilus SSH VPN has been tested and confirmed to be working on:
+Currently, the Termilus SSH VPN has been tested and confirmed to be working with the following clients:
 
 * Ubuntu 20.04
 * CentOS Stream 8

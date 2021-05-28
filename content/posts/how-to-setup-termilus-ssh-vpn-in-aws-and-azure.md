@@ -34,7 +34,7 @@ Currently, the Termilus SSH VPN has been tested and confirmed to be working with
 
 The following steps will explain how to create and deploy the Termilus SSH VPN clients. If you'd rather watch the video explainer, please scroll to the bottom.
 
-1. Deploy the Termilus SSH VPN into your Azure subscription or AWS VPC. The server will need to be assigned a publicly accessible IP address. If you're following along, make sure to update all subsequent commands with the public IP address or DNS record for your server. In this example, mine will be: `ec2-54-91-77-201.compute-1.amazonaws.com`
+1. Deploy the Termilus SSH VPN into your Azure subscription or [into AWS](https://aws.amazon.com/marketplace/pp/B095WLYM3B). The server will need to be assigned a publicly accessible IP address. If you're following along, make sure to update all subsequent commands with the public IP address or DNS record for your server. In this example, mine will be: `ec2-54-91-77-201.compute-1.amazonaws.com`
 2. Connect to the Termilus SSH VPN: `ssh -i ~/.ssh/Termilus.pem ec2-user@ec2-54-91-77-201.compute-1.amazonaws.com`
 3. Run the sshvpn command to create a new SSH VPN user. For this example, our client will be an Ubuntu machine, so we will call this client "ubuntu": `sudo sshvpn -a ubuntu`
 4. Exit the SSH session with the server: `exit`

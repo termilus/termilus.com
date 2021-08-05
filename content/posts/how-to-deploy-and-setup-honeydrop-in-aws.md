@@ -47,7 +47,8 @@ The following steps will explain how to setup and deploy the HoneyDrop appliance
 7. Navigate back to EC2, https://console.aws.amazon.com/ec2/v2/home#Instances:instanceState=running
 8. Right-click on the HoneyDrop appliance, under "Security" click "Modify IAM role"
 9. Select the HoneyDropRole and click "Save".
-10. Now, SSH into the HoneyDrop appliance and update the honeydrop.config file: nano /etc/honeydrop/honeydrop.conf
+10. Now, SSH into the HoneyDrop appliance: `ssh -i <private key> ubuntu@<IP address> -p 2222`
+11. Update the honeydrop.config file: `nano /etc/honeydrop/honeydrop.conf`
 
     * To emulate a Windows SQL server, change the following services to true:
 
@@ -70,6 +71,6 @@ The following steps will explain how to setup and deploy the HoneyDrop appliance
       * ssh.enabled
       * vnc.enabled
       * telnet.enabled
-11. Finish editing the HoneyDrop configuration file, save it and reboot the appliance.
+12. Finish editing the HoneyDrop configuration file, save it and reboot the appliance.
 
 And that's it! Your appliance should now be up and running in your environment. Test the services you enabled by interacting with them and see the alerts appear in AWS CloudWatch.

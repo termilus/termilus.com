@@ -18,7 +18,7 @@ description: This guide details how to deploy and setup the HoneyDrop appliance
 ---
 ## What
 
-The HoneyDrop appliance is a low-interaction honeypot meant to be deployed in subnets where critical visibility of malicious activities is needed. THe HoneyDrop can be configured to emulate:
+The HoneyDrop appliance is a low-interaction honeypot meant to be deployed in subnets where critical visibility of malicious activities is needed. The HoneyDrop can be configured to emulate:
 
 * Windows SQL servers
 * Windows web servers

@@ -76,7 +76,7 @@ The following steps will explain how to setup and deploy the HoneyDrop appliance
 
 In the example below, we've setup a Linux MySQL honeypot and are allowing connections to MySQL, SSH and VNC:
 
-![HoneyDrop Security Group](../../static/images/uploads/HoneyDropSecurityGroup.png)
+![HoneyDrop Security Group](../../static/images/uploads/honeydropsecuritygroup.png)
 
 And that's it! Your appliance should now be up and running in your environment. Test the services you enabled by interacting with them and see the alerts appear in AWS CloudWatch.
 

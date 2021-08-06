@@ -82,4 +82,4 @@ And that's it! Your appliance should now be up and running in your environment. 
 
 ## Video
 
-[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](../../static/images/uploads/honeydrop.mp4 "HoneyDrop Appliance Walk-Through")
+[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://termilus.s3.amazonaws.com/HoneyDrop.mp4 "HoneyDrop Appliance Walk-Through")

@@ -6,6 +6,7 @@ tags:
   - honeypot
   - honeydrop
   - deception
+  - cyber
 cover_image: ../../static/images/uploads/honeydroplogo.png
 description: This guide details how to deploy and setup the HoneyDrop appliance
   in AWS. This appliance will expose fake services often targeted by cyber

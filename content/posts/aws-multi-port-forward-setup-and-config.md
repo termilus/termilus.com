@@ -71,7 +71,7 @@ Now that the infrastructure is setup, we're ready to deploy the Multi-Port Forwa
 1. Deploy the [AWS Multi-Port Forward Server](https://aws.amazon.com/marketplace/pp/B086QWQQXX/?ref=_ptnr_termilus_ampfsc) or [Multi-Port Forward Server for Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/fatalsecurity1604924013537.multi-port-forward-server?tab=Overview) appliance from the marketplace into your public subnet
 2. If in AWS, disable source and destination checks on the instance, [more info here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html#EIP_Disable_SrcDestCheck)
 3. SSH into the Multi-Port Forward Server
-4. Open the /etc/multiportforward/​multiportforward.config file with vim or nano and update the SPORT, DHOST, DPORT and PROTOCOL entries (source port, destination host, destination port and connection protocol respectively) in JSON format; key names should be descriptive
+4. Open the /etc/multiportforward/​multiportforward.config file with vim or nano and update the SPORT, DHOST, DPORT and PROTOCOL entries (source port, destination host, destination port and connection protocol respectively) in JSON format; key names should be descriptive and should not contain any spaces
 5. Save the multiportforward.config file
 6. Reboot the server
 
@@ -92,3 +92,7 @@ Again, the same host name can be used to verify the connection to your internal 
 `ssh -i ~/.ssh/Ubuntu.pem ubuntu@ec2-12-23-34-78.compute-1.amazonaws.com -p 80`
 
 And similarly, use the same hostname when connecting via remote desktop.
+
+### Video:
+
+[![Multi-Port Forward Server Walk-Through](../../static/images/uploads/multiportforwardserverstill.png)](https://termilus.s3.amazonaws.com/Multi-PortForwardServer.mp4 "Multi-Port Forward Server Appliance Walk-Through")

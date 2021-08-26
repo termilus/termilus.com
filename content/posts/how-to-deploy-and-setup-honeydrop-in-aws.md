@@ -1,5 +1,5 @@
 ---
-title: How to Deploy and Setup HoneyDrop in AWS
+title: How to Deploy and Setup HoneyDrop Honeypot in AWS
 date: 2021-08-04T11:43:45.270Z
 published: true
 tags:
@@ -38,7 +38,7 @@ When the HoneyDrop appliance is interacted with, logs are generated and sent to 
 
 The following steps will explain how to setup and deploy the HoneyDrop appliance.
 
-1. Deploy the HoneyDrop from the AWS marketplace into your target subnet. Note: once the appliance is deployed, the administrative SSH service takes a minute to become active.
+1. Deploy the [HoneyDrop appliance](https://aws.amazon.com/marketplace/pp?sku=3bp2hpt9abet4gttm9ahurfnf) from the AWS marketplace into your target subnet. Note that once the appliance is deployed, the administrative SSH service takes a minute to become active.
 2. Navigate to https://console.aws.amazon.com/iamv2/home#/roles and click on "Create role".
 3. Set the trusted entity type to "AWS service" and the use case to "EC2", now click next.
 4. Attach the "CloudWatchAgentServerPolicy" and click next.

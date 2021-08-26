@@ -80,6 +80,40 @@ In the example below, we've setup a Linux MySQL honeypot and are allowing connec
 
 And that's it! Your appliance should now be up and running in your environment. Test the services you enabled by interacting with them and see the alerts appear in AWS CloudWatch.
 
+### CloudWatch Logs, Metrics and Alarms
+
+Now that your HoneyDrop appliance is set up and configured, it's time to configure some alerts.
+
+First, let's configure the metric filter within CloudWatch Logs. This is necessary to identify events triggered by the HoneyDrop appliance. AWS does a great job explaining the setup [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CreateMetricFilterProcedure.html), but for the sake of simplicity, navigate [here](https://console.aws.amazon.com/cloudwatch/home#logsV2:log-groups/log-group/honeydrop.log$23metric-filters) and click on "Create Metric Filter". Here we will set the filter pattern to "src_host". This means that any time an event is recorded, the metric filter will be triggered since all HoneyDrop events capture the source host field in their logs. Set the additional parameters according to the image below.
+
+![HoneyDrop Metric Filter](../../static/images/uploads/cloudwatchmetricfiltersetup.png "HoneyDrop Metric Filter")
+
+Next, we need to setup our SNS topic. This is the mechanism that will send an email out whenever the HoneyDrop catches an attacker. We'll start by navigating to AWS Simple Notification Service (SNS) and clicking on "Topics", or click [here](https://console.aws.amazon.com/sns/v3/home#/topics). Now, click on "Create topic". Enter the  details according to the following image.
+
+![](../../static/images/uploads/snstopic1.png)
+
+Now we need to subscribe to our topic by clicking on "Create subscription". Set the "Protocol" to email and the "Endpoint" to your email address then click "Create subscription". Don't forget to check your email and click "Confirm subscription"!
+
+![](../../static/images/uploads/snstopic2.png)
+
+Next, we'll configure a CloudWatch alarm. Navigate to the the "All alarms" pane in CloudWatch, [here](https://console.aws.amazon.com/cloudwatch/home#alarmsV2:) and click "Create alarm" and then "Select metric". Here, we'll select "HoneyDropMetrics", then "Metrics with no dimensions", then check "HoneyDropEvent" and click "Select metric". Now, enter the metric and condition details according to the following images and click "Next".
+
+![](../../static/images/uploads/cloudwatchalarm1.png)
+
+![](../../static/images/uploads/cloudwatchalarm2.png)
+
+Now, we'll configure the alarm to send our SNS notification whenever it's triggered. Once our SNS topic is selected, we can hit "Next".
+
+![](../../static/images/uploads/cloudwatchalarm3.png)
+
+Here, we enter our alarm name and description and hit "next".
+
+![](../../static/images/uploads/cloudwatchalarm4.png)
+
+Finally, we can review our alarm and hit "Create alarm".
+
+That's it. Now, whenever our HoneyDrop appliance lures in an attacker, its services will capture the interaction and trigger an SNS email notification - alerting you that bad things are happening.
+
 ## Video
 
 [![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://termilus.s3.amazonaws.com/HoneyDrop.mp4 "HoneyDrop Appliance Walk-Through")

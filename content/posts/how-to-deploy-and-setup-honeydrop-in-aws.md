@@ -84,7 +84,7 @@ And that's it! Your appliance should now be up and running in your environment. 
 
 [![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://termilus.s3.amazonaws.com/HoneyDrop.mp4 "HoneyDrop Appliance Walk-Through")
 
-### CloudWatch Logs, Metrics and Alarms
+### Setting Up Alarms
 
 Now that your HoneyDrop appliance is set up and configured, it's time to configure some alerts.
 

@@ -36,7 +36,7 @@ Sometimes when new destination host is provisioned, client traffic may need to b
            }
    }`
 5. Save the file and reboot the appliance.
-6. Update client-side configs to send UDP traffic (syslog in this case) to the Traffic Duplicator appliance.
+6. Update client-side configurations to send UDP traffic (syslog in this case) to the Traffic Duplicator appliance.
 7. Validate receipt of traffic server-side on all defined destinations.
 
 ## Video

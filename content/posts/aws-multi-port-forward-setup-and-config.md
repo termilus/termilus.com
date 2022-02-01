@@ -1,5 +1,5 @@
 ---
-title: AWS and Azure Multi-Port Forward Setup and Config
+title: AWS and Azure Multi-Port Forward Setup and Config (Updated 2022)
 date: 2020-10-29T09:24:14.518Z
 published: true
 tags:
@@ -7,7 +7,6 @@ tags:
   - Multi-Port Forward
   - Azure
   - NAT
-  - tag
   - PAT
 cover_image: ../../static/images/uploads/multi-portforwardserverlogo.png
 description: This guide explains how to deploy and configure a Multi-Port

@@ -38,7 +38,7 @@ When the HoneyDrop appliance is interacted with, logs are generated and sent to 
 
 The following steps will explain how to setup and deploy the HoneyDrop appliance.
 
-1. Deploy the [HoneyDrop appliance](https://aws.amazon.com/marketplace/pp?sku=3bp2hpt9abet4gttm9ahurfnf) from the AWS marketplace into your target subnet. Note that once the appliance is deployed, the administrative SSH service takes a minute to become active.
+1. Deploy the [HoneyDrop appliance](https://aws.amazon.com/marketplace/pp/prodview-fvbdhof5t5qa6) from the AWS marketplace into your target subnet. Note that once the appliance is deployed, the administrative SSH service takes a minute to become active.
 2. Navigate to https://console.aws.amazon.com/iamv2/home#/roles and click on "Create role".
 3. Set the trusted entity type to "AWS service" and the use case to "EC2", now click next.
 4. Attach the "CloudWatchAgentServerPolicy" and click next.
@@ -82,7 +82,7 @@ And that's it! Your appliance should now be up and running in your environment. 
 
 ## Video
 
-[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://termilus.s3.amazonaws.com/HoneyDrop.mp4 "HoneyDrop Appliance Walk-Through")
+[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://www.youtube.com/watch?v=kGlMrlGl9Nc "HoneyDrop Appliance Walk-Through")
 
 ### Setting Up Alarms
 

@@ -24,7 +24,7 @@ Sometimes when new destination host is provisioned, client traffic may need to b
 
 # How can I duplicate UDP traffic in AWS?
 
-1. Deploy the Traffic Duplicator appliance in the AWS Marketplace.
+1. Deploy the [Traffic Duplicator appliance in the AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-5xxv5k33yxe6k).
 2. Disable source and destination checks on the Traffic Duplicator instance.
 3. SSH into the Traffic Duplicator appliance and edit its config file using nano:\
    `nano /etc/trafficduplicator/trafficduplicator.config`

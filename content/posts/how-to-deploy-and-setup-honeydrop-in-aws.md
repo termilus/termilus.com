@@ -82,7 +82,7 @@ And that's it! Your appliance should now be up and running in your environment. 
 
 ## Video
 
-[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://www.youtube.com/watch?v=kGlMrlGl9Nc "HoneyDrop Appliance Walk-Through")
+[![HoneyDrop Walk-Through](../../static/images/uploads/honeydropstill.png)](https://youtu.be/kGlMrlGl9Nc "HoneyDrop Appliance Walk-Through")
 
 ### Setting Up Alarms
 

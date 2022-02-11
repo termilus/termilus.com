@@ -41,4 +41,4 @@ Sometimes when new destination host is provisioned, client traffic may need to b
 
 ## Video
 
-[![Traffic Duplicator Walk-Through](../../static/images/uploads/trafficduplicatorstill.png)](https://termilus.s3.amazonaws.com/TrafficDuplicator.mp4 "Traffic Duplicator Appliance Walk-Through")
+[![Traffic Duplicator Walk-Through](../../static/images/uploads/trafficduplicatorstill.png)](https://youtu.be/RZlk-u17k9s "Traffic Duplicator Appliance Walk-Through")

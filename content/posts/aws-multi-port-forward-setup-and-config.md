@@ -94,4 +94,4 @@ And similarly, use the same hostname when connecting via remote desktop.
 
 ### Video:
 
-[![Multi-Port Forward Server Walk-Through](../../static/images/uploads/multiportforwardserverstill.png)](https://termilus.s3.amazonaws.com/Multi-PortForwardServer.mp4 "Multi-Port Forward Server Appliance Walk-Through")
+[![Multi-Port Forward Server Walk-Through](../../static/images/uploads/multiportforwardserverstill.png)](https://youtu.be/teJK8vap4xQ "Multi-Port Forward Server Appliance Walk-Through")

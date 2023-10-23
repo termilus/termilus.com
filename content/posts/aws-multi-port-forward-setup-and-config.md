@@ -1,5 +1,5 @@
 ---
-title: AWS and Azure Multi-Port Forward Setup and Config (Updated 2022)
+title: AWS and Azure Multi-Port Forward Setup and Configuration
 date: 2020-10-29T09:24:14.518Z
 published: true
 tags:

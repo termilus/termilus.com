@@ -19,8 +19,7 @@ D﻿eploying, setting up and configuring the S3 File Transfer Server is super qu
    ![](../../static/images/uploads/tags1.png "At least one bucket must be specified")
 
    ![](../../static/images/uploads/tags2.png "Or, multiple buckets may be specified")
-
-
+3. N﻿ext, in IAM, create a new policy called `S3-File-Transfer-Server-Policy`. In this policy, paste the following JSON:
 
 ```
 {
@@ -57,4 +56,18 @@ D﻿eploying, setting up and configuring the S3 File Transfer Server is super qu
 }
 ```
 
-b﻿lagger
+4. Now, create an IAM role called `S3-FileTransfer-Server-Role` and attach the `S3-File-Transfer-Server-Policy` that we just created.
+
+   ![](../../static/images/uploads/role.png "Attaching the policy to the role")
+5. Next, modify the role of the EC2 instance so it has the S3-File-Transfer-Server-Role attached to it.
+
+   ![](../../static/images/uploads/modifyiamrole1.png)
+
+   ![](../../static/images/uploads/modifyiamrole2.png)
+6. Finally, now that the role has been created and attached to the EC2 instance, we just need to reboot the appliance.
+
+   ![](../../static/images/uploads/reboot.png)
+
+7﻿. And that's it! Now, you can now SFTP into the server:
+
+   ![](../../static/images/uploads/sftp.png)

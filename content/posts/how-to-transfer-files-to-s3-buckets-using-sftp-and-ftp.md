@@ -3,7 +3,9 @@ title: How To Transfer Files To S3 Buckets Using SFTP and FTP
 date: 2023-11-26T00:33:07.850Z
 published: true
 tags:
-  - name: tag
+  - S3
+  - SFTP
+  - File transfer
 cover_image: ../../static/images/uploads/s3fts.jpeg
 description: T﻿his post explains how to transfer files to and from AWS S3 using
   the S3 File Transfer Server. By using the S3 File Transfer Server, you can

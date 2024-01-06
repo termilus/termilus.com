@@ -8,14 +8,16 @@ tags:
   - File transfer
 cover_image: ../../static/images/uploads/s3fts.png
 description: T﻿his post explains how to transfer files to and from AWS S3 using
-  the S3 File Transfer Server. By using the S3 File Transfer Server, you can
-  easily upload and download files in your S3 buckets using SFTP. This ensures
-  data is always encrypted in-transit and assuming your bucket was set up with
-  encryption enabled, data will be encrypted at-rest too.
+  the [S3 File Transfer
+  Server](https://aws.amazon.com/marketplace/pp/prodview-shh2f5imxqqm6). By
+  using the S3 File Transfer Server, you can easily upload and download files in
+  your S3 buckets using SFTP. This ensures data is always encrypted in-transit
+  and assuming your bucket was set up with encryption enabled, data will be
+  encrypted at-rest too.
 ---
 D﻿eploying, setting up and configuring the S3 File Transfer Server is super quick and easy. Just follow these steps.
 
-1. To begin, you will first need to deploy the S3 File Transfer Server from the AWS Marketplace.
+1. To begin, you will first need to deploy the [S3 File Transfer Server](https://aws.amazon.com/marketplace/pp/prodview-shh2f5imxqqm6) from the AWS Marketplace.
 2. N﻿ext, configure tags on the EC2 instance. The tag name should be "Buckets" and the value should be one or more S3 bucket names that will be used for file transfers.
 
    ![](../../static/images/uploads/tags1.png "At least one bucket must be specified")

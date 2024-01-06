@@ -6,6 +6,7 @@ tags:
   - S3
   - SFTP
   - File transfer
+  - Guide
 cover_image: ../../static/images/uploads/s3fts.png
 description: T﻿his post explains how to transfer files to and from AWS S3 using
   the S3 File Transfer Server. By using the S3 File Transfer Server, you can

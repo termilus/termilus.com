@@ -6,7 +6,7 @@
 		</h1>
 
 		<p class="author__intro">
-			Enabling networking, connectivity, security, and telemetry.
+			
 		</p>
 
 		<p class="author__links">

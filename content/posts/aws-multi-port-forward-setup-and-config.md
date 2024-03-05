@@ -1,6 +1,6 @@
 ---
 title: AWS and Azure Multi-Port Forward Setup and Configuration
-date: 2020-10-29T09:24:14.518Z
+date: 2024-03-04T22:30:33.149Z
 published: true
 tags:
   - AWS
@@ -16,6 +16,10 @@ description: This guide explains how to deploy and configure a Multi-Port
   address translation (NAT) and port address translation (PAT) appliance in your
   AWS VPC or Azure subscription.
 ---
+### **Estimated Deployment Time**
+
+1﻿0 Minutes
+
 ### **What**
 
 Port forwarding or port address translation (PAT) is a method of changing the destination port of network traffic by using a forward proxy.
@@ -95,3 +99,22 @@ And similarly, use the same hostname when connecting via remote desktop.
 ### Video:
 
 [![Multi-Port Forward Server Walk-Through](../../static/images/uploads/multiportforwardserverstill.png)](https://youtu.be/teJK8vap4xQ "Multi-Port Forward Server Appliance Walk-Through")
+
+### Troubleshooting
+
+* Traffic not being forwarded?
+    * Check the security groups to ensure traffic is being permitted inbound on expected ports.
+    * Check ACLs to ensure traffic is being permitted outbound as expected.
+    * Ensure source and destination checks have been disabled on the instance: [more info here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html#EIP_Disable_SrcDestCheck)
+
+### FAQ:
+
+* Does the Multi-Port Forward Server support all regions? Yes, all regions are supported.
+* S﻿hould I use the account root user to deploy this appliance? No, we recommend using a non-root user to deploy this appliance.
+* I﻿s encrypted traffic decrypted by the appliance at any point, either in-transit or at rest? No, the Multi-Port Forward Server facilitates traffic to and from hosts but never decrypts encrypted traffic.
+* D﻿oes the Multi-Port Forward Server require any billable services? Yes, in addition to the appliance subscription, the Multi-Port Forward Server will incur the cost of the EC2 instance selected. For example, the licensing cost for a t2.micro instance would be $0.02 for the software and $0.012 for the EC2 instance, yielding a total cost of $0.032 per hour.
+* H﻿ow large of an EC2 instance should we deploy? We recommend a t3.medium for most production use cases.
+*﻿ How can I check the health of my Multi-Port Forward Server? Check the health of your server by viewing its status in the "Instance State" column in the EC2 Dashboard.
+*﻿ How can I install system or software patches? Once the system is rebooted, it will auto-install all requisite updates and upgrades.
+*﻿ How do I handle a non-responsive Multi-Port Forward Server? This is very rare, but a reboot should resolve the issue.
+*﻿ Is there technical assistance available to help troubleshoot? Yes, we're available to assist and will typically respond within 1 business day. We can be reached by emailing: support at termilus.com

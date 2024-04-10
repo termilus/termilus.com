@@ -7,7 +7,7 @@ tags:
   - Multi-Port Forwarding
   - AWS
   - Better Together
-cover_image: ../../static/images/uploads/mpfs-aws.png
+cover_image: ../../static/images/uploads/mpfsaws.png
 description: T﻿his blog post is a case study that captures the Multi-Port
   Forward Server value proposition. It outlines traffic routing challenges faced
   by many organizations and highlights examples of successful Multi-Port Forward

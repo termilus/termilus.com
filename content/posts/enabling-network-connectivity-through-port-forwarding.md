@@ -1,5 +1,5 @@
 ---
-title: Enabling Network Connectivity Through Port Forwarding
+title: Enabling AWS Network Connectivity Through Port Forwarding
 date: 2024-04-09T19:17:51.701Z
 published: true
 tags:

@@ -128,8 +128,6 @@ Finally, we can review our alarm and hit "Create alarm".
 
 That's it. Now, whenever our HoneyDrop appliance lures in an attacker, its services will capture the interaction and trigger an SNS email notification - alerting you that bad things are happening.
 
-
-
 ## T﻿roubleshooting
 
 * N﻿ot seeing alerts in CloudWatch Logs? 
@@ -138,15 +136,13 @@ That's it. Now, whenever our HoneyDrop appliance lures in an attacker, its servi
   * E﻿nsure the role attached to the HoneyDrop appliance has the CloudWatchAgentServerPolicy policy attached to it.
   * Attempt authenticating to one of the enabled services to generate some logs.
 
-
-
 ## F﻿AQ
 
 * Does the HoneyDrop appliance support single-AZ, multi-AZ or multi-region deployments? The appliance is a single EC2 instance that can be deployed into any VPC in any region.
 * D﻿oes the HoneyDrop appliance support all regions? Yes, all regions are supported.
 * S﻿hould we use the root user for deploying the HoneyDrop appliance? No, it is recommended to use a non-root user to deploy the appliance.
 * S﻿hould the HoneyDrop appliance be encrypted when deployed? Yes, security best-practice is to encrypt the appliance when provisioned.
-* I﻿s data in-transit encrypted? Yes, data sent to CLoudWatch Logs is encrypted in-transit.
+* I﻿s data in-transit encrypted? Yes, data sent to CloudWatch Logs is encrypted in-transit.
 * W﻿hich services used by HoneyDrop are billable? The HoneyDrop appliance incurs Cloudwatch, EC2, and software cost when deployed. For example, a t3.medium HoneyDrop instance costs $0.042 per hour plus $0.05 per hour for software for a total of $0.092 per hour of deployment.
 * H﻿ow can I monitor the health of the HoneyDrop appliance? Check the health of your server by viewing its status in the "Instance State" column in the EC2 Dashboard.
 * H﻿ow does the HoneyDrop appliance get patched and updated? The appliance is set to auto-install security patches on a daily basis.

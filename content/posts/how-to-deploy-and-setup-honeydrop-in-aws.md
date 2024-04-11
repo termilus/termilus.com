@@ -78,9 +78,9 @@ The following steps will explain how to setup and deploy the HoneyDrop appliance
 12. Finish editing the HoneyDrop configuration file, save it and reboot the appliance.
 13. Edit the security group of the HoneyDrop appliance to only allow honeypot ports to be exposed: https://console.aws.amazon.com/ec2/v2/home#SecurityGroups:
 
-In the example below, we've setup a Linux MySQL honeypot and are allowing connections to MySQL, SSH and VNC:
+In the example below, we've setup a Linux MySQL honeypot and are allowing connections to SSH, VNC, and MySQL:
 
-![HoneyDrop Architectural Diagram](../../static/images/uploads/honeydropdiagram.png)
+![HoneyDrop Architectural Diagram](../../static/images/uploads/honeydroplinuxdiagram.png)
 
 ![HoneyDrop Security Group](../../static/images/uploads/honeydropsecuritygroup.png)
 

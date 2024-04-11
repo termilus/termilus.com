@@ -1,6 +1,6 @@
 ---
 title: How to Deploy and Setup HoneyDrop Honeypot in AWS
-date: 2021-08-04T11:43:45.270Z
+date: 2024-04-11T19:39:09.164Z
 published: true
 tags:
   - honeypot

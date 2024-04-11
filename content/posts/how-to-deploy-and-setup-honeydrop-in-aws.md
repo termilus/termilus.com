@@ -16,6 +16,10 @@ description: This guide details how to deploy and setup the HoneyDrop appliance
   Alternatively, CloudWatch alarms can trigger Lambda functions to invoke
   incident response actions on your behalf.
 ---
+## E﻿stimated Deployment Time
+
+10 Minutes
+
 ## What
 
 The HoneyDrop appliance is a low-interaction honeypot meant to be deployed in subnets where critical visibility of malicious activities is needed. The HoneyDrop can be configured to emulate:
@@ -38,7 +42,7 @@ When the HoneyDrop appliance is interacted with, logs are generated and sent to 
 
 The following steps will explain how to setup and deploy the HoneyDrop appliance.
 
-1. Deploy the [HoneyDrop appliance](https://aws.amazon.com/marketplace/pp/prodview-fvbdhof5t5qa6) from the AWS marketplace into your target subnet. Note that once the appliance is deployed, the administrative SSH service takes a minute to become active.
+1. Deploy the [HoneyDrop appliance](https://aws.amazon.com/marketplace/pp/prodview-fvbdhof5t5qa6) from the AWS marketplace into your target subnet. Termilus recommends a t3.medium instance size for optimal operation. Note that once the appliance is deployed, the administrative SSH service takes a minute to become active.
 2. Navigate to https://console.aws.amazon.com/iamv2/home#/roles and click on "Create role".
 3. Set the trusted entity type to "AWS service" and the use case to "EC2", now click next.
 4. Attach the "CloudWatchAgentServerPolicy" and click next.
@@ -75,6 +79,8 @@ The following steps will explain how to setup and deploy the HoneyDrop appliance
 13. Edit the security group of the HoneyDrop appliance to only allow honeypot ports to be exposed: https://console.aws.amazon.com/ec2/v2/home#SecurityGroups:
 
 In the example below, we've setup a Linux MySQL honeypot and are allowing connections to MySQL, SSH and VNC:
+
+![HoneyDrop Architectural Diagram](../../static/images/uploads/honeydropdiagram.png)
 
 ![HoneyDrop Security Group](../../static/images/uploads/honeydropsecuritygroup.png)
 
@@ -121,3 +127,28 @@ Here, we enter our alarm name and description and hit "next".
 Finally, we can review our alarm and hit "Create alarm".
 
 That's it. Now, whenever our HoneyDrop appliance lures in an attacker, its services will capture the interaction and trigger an SNS email notification - alerting you that bad things are happening.
+
+
+
+## T﻿roubleshooting
+
+* N﻿ot seeing alerts in CloudWatch Logs? 
+
+  * Check to make sure the HoneyDrop is in a subnet where other hosts can reach it and that security group permits inbound connections on enabled services.
+  * E﻿nsure the role attached to the HoneyDrop appliance has the CloudWatchAgentServerPolicy policy attached to it.
+  * Attempt authenticating to one of the enabled services to generate some logs.
+
+
+
+## F﻿AQ
+
+* Does the HoneyDrop appliance support single-AZ, multi-AZ or multi-region deployments? The appliance is a single EC2 instance that can be deployed into any VPC in any region.
+* D﻿oes the HoneyDrop appliance support all regions? Yes, all regions are supported.
+* S﻿hould we use the root user for deploying the HoneyDrop appliance? No, it is recommended to use a non-root user to deploy the appliance.
+* S﻿hould the HoneyDrop appliance be encrypted when deployed? Yes, security best-practice is to encrypt the appliance when provisioned.
+* I﻿s data in-transit encrypted? Yes, data sent to CLoudWatch Logs is encrypted in-transit.
+* W﻿hich services used by HoneyDrop are billable? The HoneyDrop appliance incurs Cloudwatch, EC2, and software cost when deployed. For example, a t3.medium HoneyDrop instance costs $0.042 per hour plus $0.05 per hour for software for a total of $0.092 per hour of deployment.
+* H﻿ow can I monitor the health of the HoneyDrop appliance? Check the health of your server by viewing its status in the "Instance State" column in the EC2 Dashboard.
+* H﻿ow does the HoneyDrop appliance get patched and updated? The appliance is set to auto-install security patches on a daily basis.
+* H﻿ow do I handle a non-responsive HoneyDrop appliance? This is very rare, but a reboot should resolve the issue.
+* Is there technical assistance available to help troubleshoot? Yes, we're available to assist and will typically respond within 1 business day. We can be reached by emailing: support at termilus.com

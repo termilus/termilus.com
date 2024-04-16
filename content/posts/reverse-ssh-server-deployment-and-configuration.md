@@ -26,13 +26,13 @@ description: >-
 
 ### **What**
 
-The Reverse SSH Server is an appliance which provides persistent connections to other servers or IoT devices even when those endpoints are deployed in private IP environments and even if the endpoints reboot unexpectedly.
+The Reverse SSH Server is an appliance which provides persistent connections to other servers or IoT devices even when those endpoints are deployed in private IP environments and even if the endpoints reboot unexpectedly. These reverse connections allow system administrators to have uninterrupted SSH access to the connected client systems for remote administration.
 
 This persistent connection is provided by SSH over port 22 by default. Authentication to the server is specific to each client and key-based authentication is used. Old clients can be removed from the server and new clients can be added at anytime.
 
 ### **Why**
 
-The Reverse SSH Server eliminates the need to track and remember multiple, dozens, or hundreds of IP addresses of endpoint systems which need to be managed. All clients auto-connect to the server and maintain the reverse connection at all times. The reverse SSH server meets the following needs:
+The Reverse SSH Server eliminates the need to track and remember multiple, dozens, or hundreds of IP addresses of endpoint systems which need to be managed. All clients auto-connect to the server and maintain the reverse connection at all times. The Reverse SSH server meets the following needs:
 
 1. Persistent client connections to single server for easier administration.
 2. Custom client names for ease of administration.

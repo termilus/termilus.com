@@ -28,7 +28,7 @@ T﻿he S3 File Transfer Server was designed to be deployed quickly and easily. C
 
 ## W﻿hy
 
-* T﻿he S3 File Transfer Server is a convenient, familiar file transfer capabilities with S3 scalability and durability.
+* T﻿he S3 File Transfer Server is a convenient solution, with familiar file transfer capabilities sporting S3 scalability and durability.
 * T﻿he appliance is a turn-key solution, ready for production deployments.
 * E﻿ncryption and speed are baked into the appliance to protect sensitive data while enabling speedy file transfers.
 

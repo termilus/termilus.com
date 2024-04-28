@@ -114,6 +114,7 @@ H﻿ere is a quick diagram of the S3 File Transfer Server deployed in a typical 
 * D﻿oes the S3 File Transfer Server appliance support all regions? Yes, all regions are supported.
 * S﻿hould we use the root user for deploying the S3 File Transfer Server appliance? No, it is recommended to use a non-root user to deploy the appliance.
 * S﻿hould the S3 File Transfer Server appliance be encrypted when deployed? Yes, security best-practice is to encrypt the appliance when provisioned.
+* S﻿hould S3 buckets be configured with server-side encryption? Yes, security best-practice is to encrypt the S3 buckets.
 * I﻿s data in-transit encrypted? Yes, communication via SSH and SFTP is encrypted in-transit.
 * W﻿hich services used by S3 File Transfer Server are billable? The S3 File Transfer Server appliance incurs S3, EC2, and software cost when deployed. For example, a t3.medium S3 File Transfer Server instance costs $0.042 per hour plus $0.088 per hour for software for a total of $0.13 per hour of deployment.
 * H﻿ow can I monitor the health of the S3 File Transfer Server appliance? Check the health of your server by viewing its status in the "Instance State" column in the EC2 Dashboard.

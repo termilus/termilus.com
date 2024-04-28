@@ -13,6 +13,10 @@ description: This guide explains how to deploy the Termilus SSH VPN Server in
   your AWS VPC or Azure subscription and allows you to access internal resources
   without exposing any administrative bastion hosts
 ---
+## E﻿stimated Deployment Time
+
+10 Minutes
+
 ## What
 
 The Termilus SSH VPN server is a remote access solution similar to a traditional VPN, however traffic traverses an SSH tunnel as opposed to PPTP, L2TP, IPSEC etc.
@@ -57,6 +61,34 @@ The following steps will explain how to create and deploy the Termilus SSH VPN c
 
    MacOS: `sudo launchctl unload /Library/LaunchDaemons/org.termilus.sshvpn.plist`
 
+H﻿ere is a quick diagram of what we just deployed:
+
+![](../../static/images/uploads/termilussshvpndiagram.drawio.png)
+
 ### **Video Walk-Through**
 
 [![Termilus SSH VPN Walk-Through](../../static/images/uploads/termilussshvpnstill.png)](../../static/images/uploads/termilussshvpn.mp4 "Termilus SSH VPN Server Walk-Through")
+
+
+
+## T﻿roubleshooting
+
+* Unable to connect to the SSH VPN?
+
+  * Check to make sure appliance's security group allows inbound SSH connections from the correct source IP address(es).
+  * M﻿ake sure the client has been created, that the install script has been ran, and that the SSH VPN service has been started.
+  * Ensure the SSH VPN server is powered on.
+  * M﻿ake sure the client network firewall is not preventing outbound SSH communication to the appliance.
+
+## F﻿AQ
+
+* Does the SSH VPN appliance support single-AZ, multi-AZ or multi-region deployments? The appliance is a single EC2 instance that can be deployed into any VPC in any region.
+* D﻿oes the SSH VPN appliance support all regions? Yes, all regions are supported.
+* S﻿hould we use the root user for deploying the SSH VPN appliance? No, it is recommended to use a non-root user to deploy the appliance.
+* S﻿hould the SSH VPN appliance be encrypted when deployed? Yes, security best-practice is to encrypt the appliance when provisioned.
+* I﻿s data in-transit encrypted? Yes, all communication through the SSH VPN server is encrypted via the SSH encryption cipher suites.
+* W﻿hich services used by SSH VPN are billable? The SSH VPN appliance incurs EC2, and software cost when deployed. For example, a t3.medium SSH VPN instance costs $0.042 per hour plus $0.05 per hour for software for a total of $0.092 per hour of deployment.
+* H﻿ow can I monitor the health of the SSH VPN appliance? Check the health of your server by viewing its status in the "Instance State" column in the EC2 Dashboard.
+* H﻿ow does the SSH VPN appliance get patched and updated? The appliance is set to auto-install security patches on a daily basis.
+* H﻿ow do I handle a non-responsive SSH VPN appliance? This is very rare, but a reboot should resolve the issue.
+* Is there technical assistance available to help troubleshoot? Yes, we're available to assist and will typically respond within 1 business day. We can be reached by emailing: support at termilus.com

@@ -95,6 +95,10 @@ D﻿eploying, setting up and configuring the S3 File Transfer Server is super qu
 
    ![](../../static/images/uploads/sftp.png)
 
+H﻿ere is a quick diagram of the S3 File Transfer Server deployed in a typical VPC:
+
+![](../../static/images/uploads/s3filetransferserverdiagram.drawio.png)
+
 ## T﻿roubleshooting
 
 * U﻿nable to access the SFTP service?
@@ -103,8 +107,6 @@ D﻿eploying, setting up and configuring the S3 File Transfer Server is super qu
 * N﻿ot seeing files on the S3 File Transfer Server that exist in the bucket?
 
   * M﻿ake sure that the security policy is attached to the role and that the S3 File Transfer Server has the role attached to itself.
-
-
 
 ## F﻿AQ
 
